@@ -1,0 +1,6 @@
+{
+  "name": "STUX — Modern Architecture & Interior Design",
+  "description": "Elevated architectural design and luxury modular living spaces crafted to transform your daily living.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
