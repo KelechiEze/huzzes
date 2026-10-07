@@ -1,5 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUpRight, X, Check, Plus, Minus } from 'lucide-react';
+import aboutPalmSpringsImage from './assets/images/about_palm_springs_villa_1791362780533.jpg';
+import beachVillaImage from './assets/images/beach_villa_resort_rome_1791362838639.jpg';
+import blueskyVillaImage from './assets/images/bluesky_villa_santorini_1791362819775.jpg';
+import claxioVillaImage from './assets/images/claxio_villa_austin_1791362801030.jpg';
+import cubeSkyVillaImage from './assets/images/cube_sky_villa_hero_1791361898248.jpg';
+import diagonTowerImage from './assets/images/diagon_tower_madrid_1791362790909.jpg';
+import processOneImage from './assets/images/process_01_white_canopy_1791363563245.jpg';
+import processTwoImage from './assets/images/process_02_red_facade_1791363574989.jpg';
+import processThreeImage from './assets/images/process_03_curved_ribbons_1791363585327.jpg';
+import quoteArchShellImage from './assets/images/quote_arch_shell_1791363538251.jpg';
+import quoteSteppedConcreteImage from './assets/images/quote_stepped_concrete_1791363550186.jpg';
+import serviceArchitectureImage from './assets/images/service_architecture_concrete_1791362829300.jpg';
+import testimonialAlexImage from './assets/images/testimonial_alex_hedge_1791363605435.jpg';
+import testimonialJonthaanImage from './assets/images/testimonial_jonthaan_k_1791363616436.jpg';
+import testimonialMariaImage from './assets/images/testimonial_maria_elia_1791363595582.jpg';
+import voxiMuseumImage from './assets/images/voxi_museum_berlin_1791362811304.jpg';
+import ctaGabledRoofsImage from './assets/images/cta_gabled_roofs_1791363628682.jpg';
 
 interface ShowcaseProject {
   id: string;
@@ -22,7 +39,7 @@ const HERO_PROJECT = {
   category: 'INTERIOR',
   sqft: '2730 SQFT',
   year: '2025',
-  image: '/src/assets/images/cube_sky_villa_hero_1791361898248.jpg',
+  image: cubeSkyVillaImage,
   description:
     'Elevated slightly above the rugged Mojave terrain, Cube Sky Villa is a precision-engineered modular sanctuary featuring seamless curved steel framing, solar-control panoramic glazing, and warm recessed linear illumination.',
   specs: [
@@ -41,7 +58,7 @@ const FEATURED_RESORT_PROJECT = {
   category: 'RESORT',
   sqft: '3260 SQFT',
   year: '2025',
-  image: '/src/assets/images/beach_villa_resort_rome_1791362838639.jpg',
+  image: beachVillaImage,
   description:
     'Nestled amidst coastal dune grass and weathered volcanic boulders along the Tyrrhenian shore, Beach Villa Resort pairs a pitched charred-timber roofline with floor-to-ceiling marine-grade glazing.',
   specs: [
@@ -61,7 +78,7 @@ const PROJECTS_LIST: ShowcaseProject[] = [
     category: 'ARCHITECTURE',
     sqft: '18,400 SQFT',
     year: '2025',
-    image: '/src/assets/images/diagon_tower_madrid_1791362790909.jpg',
+    image: diagonTowerImage,
     description:
       'Sculpted high-rise commercial towers wrapped in vertical terracotta-copper solar fins that dynamically filter Mediterranean daylight while framing planted sky-terraces.',
     specs: [
@@ -79,7 +96,7 @@ const PROJECTS_LIST: ShowcaseProject[] = [
     category: 'EXTERIOR',
     sqft: '4,680 SQFT',
     year: '2025',
-    image: '/src/assets/images/claxio_villa_austin_1791362801030.jpg',
+    image: claxioVillaImage,
     description:
       'A cantilevered white architectural concrete pavilion suspended beside a mirror-still infinity basin, illuminated from within by warm recessed amber hearth lighting.',
     specs: [
@@ -97,7 +114,7 @@ const PROJECTS_LIST: ShowcaseProject[] = [
     category: 'ARCHITECTURE',
     sqft: '24,900 SQFT',
     year: '2024',
-    image: '/src/assets/images/voxi_museum_berlin_1791362811304.jpg',
+    image: voxiMuseumImage,
     description:
       'Soaring parabolic concrete vaults and a ribbon-like copper-clad helical staircase guide visitors from the sunlit botanical courtyard into the main exhibition galleries.',
     specs: [
@@ -115,7 +132,7 @@ const PROJECTS_LIST: ShowcaseProject[] = [
     category: 'RESIDENTIAL',
     sqft: '3,190 SQFT',
     year: '2025',
-    image: '/src/assets/images/bluesky_villa_santorini_1791362819775.jpg',
+    image: blueskyVillaImage,
     description:
       'Minimalist whitewashed cubic volumes punctured by deep-recessed steel window frames, engineered for passive Aegean cross-ventilation and stark solar contrast.',
     specs: [
@@ -164,28 +181,28 @@ const SERVICES_LIST = [
     title: 'ARCHITECTURE',
     description:
       'Expert architecture services focused on modern, sustainable, and innovative design solutions.',
-    image: '/src/assets/images/service_architecture_concrete_1791362829300.jpg',
+    image: serviceArchitectureImage,
   },
   {
     num: '02',
     title: 'RESIDENTIAL',
     description:
       'Custom residential sanctuaries crafted with seamless indoor-outdoor flow, natural materials, and enduring structural clarity.',
-    image: '/src/assets/images/about_palm_springs_villa_1791362780533.jpg',
+    image: aboutPalmSpringsImage,
   },
   {
     num: '03',
     title: 'INTERIOR',
     description:
       'Refined interior curation combining bespoke architectural millwork, warm ambient illumination, and tactile stone surfaces.',
-    image: '/src/assets/images/cube_sky_villa_hero_1791361898248.jpg',
+    image: cubeSkyVillaImage,
   },
   {
     num: '04',
     title: 'FLOORS LAYOUT',
     description:
       'Precision spatial planning and modular floor layouts engineered to optimize daylight, sightlines, and daily living.',
-    image: '/src/assets/images/claxio_villa_austin_1791362801030.jpg',
+    image: claxioVillaImage,
   },
 ];
 
@@ -194,19 +211,19 @@ const PROCESS_STEPS = [
     num: '/01',
     text: 'We analyze site potential to build a solid foundation.',
     tag: 'DISCOVERY & ANALYSIS',
-    image: '/src/assets/images/process_01_white_canopy_1791363563245.jpg',
+    image: processOneImage,
   },
   {
     num: '/02',
     text: 'Turning concepts into precise, structured, and functional design blueprints',
     tag: 'CONCEPT & DESIGN',
-    image: '/src/assets/images/process_02_red_facade_1791363574989.jpg',
+    image: processTwoImage,
   },
   {
     num: '/03',
     text: 'Building projects to perfection via technical documents.',
     tag: 'EXPERT OVERSIGHT',
-    image: '/src/assets/images/process_03_curved_ribbons_1791363585327.jpg',
+    image: processThreeImage,
   },
 ];
 
@@ -216,21 +233,21 @@ const TESTIMONIALS_LIST = [
     country: 'USA',
     quote: '“Professional and creative experts who truly understand modern and functional design”',
     index: '(01)',
-    image: '/src/assets/images/testimonial_maria_elia_1791363595582.jpg',
+    image: testimonialMariaImage,
   },
   {
     name: 'Alex Hedge',
     country: 'Italy',
     quote: '“They listen, they design, and they build pure inspiration”',
     index: '(02)',
-    image: '/src/assets/images/testimonial_alex_hedge_1791363605435.jpg',
+    image: testimonialAlexImage,
   },
   {
     name: 'Jonthaan K',
     country: 'Spain',
     quote: '“They designed a stunning modern space that perfectly complements our unique lifestyle.”',
     index: '(03)',
-    image: '/src/assets/images/testimonial_jonthaan_k_1791363616436.jpg',
+    image: testimonialJonthaanImage,
   },
 ];
 
@@ -760,19 +777,19 @@ export default function App() {
             <div className="mt-9 flex items-center gap-5">
               <div className="flex items-center -space-x-2.5">
                 <img
-                  src="/src/assets/images/testimonial_alex_hedge_1791363605435.jpg"
+                  src={testimonialAlexImage}
                   alt="Client 1"
                   referrerPolicy="no-referrer"
                   className="w-[42px] h-[42px] rounded-full border-2 border-white object-cover shrink-0"
                 />
                 <img
-                  src="/src/assets/images/testimonial_maria_elia_1791363595582.jpg"
+                  src={testimonialMariaImage}
                   alt="Client 2"
                   referrerPolicy="no-referrer"
                   className="w-[42px] h-[42px] rounded-full border-2 border-white object-cover shrink-0"
                 />
                 <img
-                  src="/src/assets/images/testimonial_jonthaan_k_1791363616436.jpg"
+                  src={testimonialJonthaanImage}
                   alt="Client 3"
                   referrerPolicy="no-referrer"
                   className="w-[42px] h-[42px] rounded-full border-2 border-white object-cover shrink-0"
@@ -792,7 +809,7 @@ export default function App() {
 
           <div className="w-full overflow-hidden">
             <img
-              src="/src/assets/images/about_palm_springs_villa_1791362780533.jpg"
+              src={aboutPalmSpringsImage}
               alt="Modern architectural residence with vertical louvers and desert landscaping"
               referrerPolicy="no-referrer"
               className="w-full h-[380px] sm:h-[460px] lg:h-[510px] object-cover"
@@ -1115,7 +1132,7 @@ export default function App() {
           <div className="flex justify-end">
             <div className="w-[280px] sm:w-[360px] md:w-[400px] aspect-[1.36/1] overflow-hidden">
               <img
-                src="/src/assets/images/quote_arch_shell_1791363538251.jpg"
+                src={quoteArchShellImage}
                 alt="Parametric shell structure"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
@@ -1127,7 +1144,7 @@ export default function App() {
           <div className="flex justify-start">
             <div className="w-[280px] sm:w-[360px] md:w-[400px] aspect-[1.36/1] overflow-hidden">
               <img
-                src="/src/assets/images/quote_stepped_concrete_1791363550186.jpg"
+                src={quoteSteppedConcreteImage}
                 alt="Minimalist stepped concrete architecture"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
@@ -1139,7 +1156,7 @@ export default function App() {
           <div className="flex justify-end pr-[8%] md:pr-[13%]">
             <div className="w-[170px] sm:w-[200px] aspect-[1.12/1] overflow-hidden">
               <img
-                src="/src/assets/images/diagon_tower_madrid_1791362790909.jpg"
+                src={diagonTowerImage}
                 alt="Architectural tower corner"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
@@ -1151,7 +1168,7 @@ export default function App() {
           <div className="flex justify-start pl-[8%] md:pl-[12%]">
             <div className="w-[190px] sm:w-[235px] aspect-[1.15/1] overflow-hidden">
               <img
-                src="/src/assets/images/bluesky_villa_santorini_1791362819775.jpg"
+                src={blueskyVillaImage}
                 alt="Angular white modern geometry"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
@@ -1163,7 +1180,7 @@ export default function App() {
           <div className="flex justify-end">
             <div className="w-[280px] sm:w-[360px] md:w-[400px] aspect-[1.36/1] overflow-hidden">
               <img
-                src="/src/assets/images/claxio_villa_austin_1791362801030.jpg"
+                src={claxioVillaImage}
                 alt="Warm cantilevered pavilion"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
@@ -1175,7 +1192,7 @@ export default function App() {
           <div className="flex justify-start">
             <div className="w-[280px] sm:w-[360px] md:w-[400px] aspect-[1.36/1] overflow-hidden">
               <img
-                src="/src/assets/images/process_02_red_facade_1791363574989.jpg"
+                src={processTwoImage}
                 alt="Red architectural tower"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
@@ -1551,7 +1568,7 @@ export default function App() {
          ===================================================================== */}
       <section className="relative w-full h-[520px] sm:h-[580px] md:h-[630px] overflow-hidden bg-[#5F9EA0]">
         <img
-          src="/src/assets/images/cta_gabled_roofs_1791363628682.jpg"
+          src={ctaGabledRoofsImage}
           alt="Modern architectural gabled roofs against teal sky"
           referrerPolicy="no-referrer"
           className="absolute inset-0 w-full h-full object-cover object-bottom"
